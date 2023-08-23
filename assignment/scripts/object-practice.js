@@ -28,9 +28,21 @@ console.log('A little about me:', me);
 */
 
 
+// .lastName
+// ['lastName']
+
 let fullName = me.firstName + " " + me['lastName'];
 console.log("fullName: ", fullName);
 
+let myArray = [   {name: 'JD'},               /// myArray[0]
+                  {foods:['pizza','chicken']},  // myArray[1]  
+                  {}    //myArray[2]
+                  // {bacon: true}
+              ]
+
+let favFood = {bacon: true}
+myArray.push(favFood)
+console.log(myArray )
 
 /* 3. Nested arrays
   - Console.log your first favorite food
@@ -70,3 +82,11 @@ console.log("reference variable added 'favoriteColor' ", me, me.favoriteColor);
 me.bestFriend = "Ben";
 
 console.log("reference variable added 'bestFriend'", me, me.bestFriend);
+
+
+
+
+
+
+
+
