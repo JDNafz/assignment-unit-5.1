@@ -12,7 +12,11 @@ console.log('***** Object Practice *****')
   - Also give it an array 'favThreeFoods'
 */
 const me = {
-  // TODO - add properties here
+  firstName: "JD",
+  lastName: "Nafziger",
+  hasSiblings: true,
+  shoeCount: 8,
+  favThreeFoods: ["bacon","pizza","ramen"]
 };
 console.log('A little about me:', me);
 
@@ -24,13 +28,21 @@ console.log('A little about me:', me);
 */
 
 
+let fullName = me.firstName + " " + me['lastName'];
+console.log("fullName: ", fullName);
+
 
 /* 3. Nested arrays
   - Console.log your first favorite food
   - Console.log your last favorite food 
 */
+let firstFavoriteFood = me['favThreeFoods'][0];
+console.log("first Fav Food: ",firstFavoriteFood);
 
-
+let lastSelector = me.favThreeFoods.length - 1
+let int = lastSelector 
+let lastFavoriteFood = me.favThreeFoods[int]
+console.log("last Fav Food: ",lastFavoriteFood)
 
 /* 4. Change a property of an existing object.
   - Console.log your current shoe count.
@@ -38,6 +50,10 @@ console.log('A little about me:', me);
   - Set your object's shoeCount to be what it was plus 1
   - Console.log your updated shoe count. 
 */
+console.log("Current Shoe Count: ", me['shoeCount']);
+me.shoeCount ++;
+console.log("Current Shoe Count (after ++): ", me['shoeCount']);
+
 
 
 /* 5. Add a new property to an existing object.
@@ -46,3 +62,11 @@ console.log('A little about me:', me);
   - Cool huh? It works, even though it wasn't there before
   - Console.log your object
 */
+me['favoriteColor'] = "green";
+
+console.log("reference variable added 'favoriteColor' ", me, me.favoriteColor);
+
+
+me.bestFriend = "Ben";
+
+console.log("reference variable added 'bestFriend'", me, me.bestFriend);
